@@ -12,7 +12,7 @@ import tensorflow as tf
 import numpy as np
 
 
-class hand_classifier(object):
+class ResFi(object):
 
     def __init__(self, model_save_path='./model/model'):
         self.model_save_path = model_save_path
@@ -367,7 +367,7 @@ def main(_):
     orig_data2 = read_data(test_dir)
     X_test, Y_test = process_orig_datasets(orig_data2)
 
-    model = hand_classifier()
+    model = ResFi()
     model.train(X_train, Y_train)
     model.test(X_test, Y_test)
     model.evaluate(X_train, Y_train)
